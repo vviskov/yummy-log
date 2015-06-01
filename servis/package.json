@@ -1,0 +1,15 @@
+{
+    "name": "yummy-log-servis",
+    "version": "0.0.1",
+    "description": "",
+    "main": "main.js",
+    "author": "vviskov <valentina.viskov@gmail.com>",
+    "license": "ISC",
+    "devDependencies": {
+        "winston": "*",
+        "express": "*",
+        "mongodb": "*",
+        "body-parser": "*",
+        "object-to-xml": "*"
+    }
+}
