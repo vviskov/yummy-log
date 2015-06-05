@@ -10,6 +10,8 @@
         "express": "*",
         "mongodb": "*",
         "body-parser": "*",
-        "object-to-xml": "*"
+        "express-xml-bodyparser": "*",
+        "object-to-xml": "*",
+        "xml2js": "*"
     }
 }

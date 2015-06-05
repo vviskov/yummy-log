@@ -1,8 +1,10 @@
 var
 	express = require("express"),
-	bodyParser = require("body-parser"),
 	winston = require("winston"),
-	otx = require("object-to-xml");
+	exb = require("express-xml-bodyparser"),
+	otx = require("object-to-xml"),
+	mongoi = require("./mongoi.js");
+	
 
 var
 	server = express();
@@ -12,21 +14,30 @@ server.use(function(request, response, next) {
 	response.setHeader("Access-Control-Allow-Headers", "X-Requested-With,content-type");
 	next();
 });
-server.use(bodyParser.json());
+server.use(exb());
 
-var onBla = function(request, response) {
-	winston.info(request.hostname);
-	response.send(
-		otx({
-			'?xml version="1.0" encoding="UTF-8"?' : null,
-			"msg": "mb hfcn"
-		})
-	);
-	winston.info("duboko");
-};
+server.get("/recipes", function(request, response) {
+	mongoi.loadRecipes(function(data) {
+		response.send(
+			otx({
+				'?xml version="1.0" encoding="UTF-8"?' : null,
+				"recipes": data
+			})
+		);
+	});
+});
 
-server.get("/bla", onBla);
+server.post("/recipes", function(request, response) {
+	mongoi.saveRecipe(request.body, function(data) {
+		response.send(otx({"msg": "OK"}));
+	});
+});
+
+server.delete("/recipes", function(request, response) {
+	mongoi.deleteRecipe(request.body, function(data) {
+		response.send(otx({"msg": "OK"}));
+	});
+});
 
 winston.info("starting");
 server.listen(3000);
-
