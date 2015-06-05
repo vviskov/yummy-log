@@ -16,6 +16,8 @@ class TFormPocetna : public TForm
 __published:	// IDE-managed Components
 	TXMLDocument *XMLDocument1;
 	TButton *Button1;
+	TStaticText *StaticText1;
+	TStaticText *StaticText2;
 	void __fastcall Button1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations

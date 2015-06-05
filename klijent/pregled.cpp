@@ -12,5 +12,6 @@ TFormPregled *FormPregled;
 __fastcall TFormPregled::TFormPregled(TComponent* Owner)
 	: TForm(Owner)
 {
+
 }
 //---------------------------------------------------------------------------
