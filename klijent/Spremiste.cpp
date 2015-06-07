@@ -68,6 +68,8 @@ namespace YummyLog {
 
         http->Request->ContentType = "text/xml";
 
+		UnicodeString bla = recept->GetXML();
+
 		TStringStream* ts = new TStringStream(
 			recept->GetXML(),
 			TEncoding::UTF8,

@@ -21,6 +21,7 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 	{
 		Application->Initialize();
 		Application->MainFormOnTaskBar = true;
+		TStyleManager::TrySetStyle("Metropolis UI Blue");
 		Application->CreateForm(__classid(TFormPocetna), &FormPocetna);
 		Application->CreateForm(__classid(TFormLista), &FormLista);
 		Application->CreateForm(__classid(TFormPregled), &FormPregled);

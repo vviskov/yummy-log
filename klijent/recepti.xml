@@ -1,0 +1,52 @@
+﻿<recipes>
+  <recipe>
+    <id>55720abac7f2bf4708e127ad</id>
+    <name>Valentinine palačinke s jagodama</name>
+    <description>Valine najbolje palačinke na svijetu!</description>
+    <steps>UBITI SE TREBA!</steps>
+    <chef>Valentina Viskov</chef>
+    <ingredients>
+      <ingredient>
+        <name>Jaje</name>
+        <amount>2x</amount>
+      </ingredient>
+      <ingredient>
+        <name>Glatko brašno</name>
+        <amount>200g</amount>
+      </ingredient>
+      <ingredient>
+        <name>Jagode</name>
+        <amount>450g</amount>
+      </ingredient>
+    </ingredients>
+  </recipe>
+  <recipe>
+    <id>557322578efd24c3a1071b6c</id>
+    <name>Paštašuta na pamidorima</name>
+    <description>Špageti sa umakom od rajčice</description>
+    <steps>Dinstati nasjeckani luk, dodati mrkvu(naribanu/nasjeckanu). Kad dobiju laganu boju dodati  rajčicu. Začiniti i kuhati 20-ak minuta. Sa strane skuhati tjesteninu. Po želji posuti parmezana.</steps>
+    <chef>Valentina Viskov</chef>
+    <ingredients>
+      <ingredient>
+        <name>Tjestenina</name>
+        <amount>300g</amount>
+      </ingredient>
+      <ingredient>
+        <name>Luk</name>
+        <amount>2 srednje glavice</amount>
+      </ingredient>
+      <ingredient>
+        <name>Mrkva</name>
+        <amount>2 velike</amount>
+      </ingredient>
+      <ingredient>
+        <name>Pelati</name>
+        <amount>2 konzerve</amount>
+      </ingredient>
+      <ingredient>
+        <name>Začini</name>
+        <amount>po želji</amount>
+      </ingredient>
+    </ingredients>
+  </recipe>
+</recipes>
