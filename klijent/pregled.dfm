@@ -11,6 +11,7 @@ object FormPregled: TFormPregled
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
   PixelsPerInch = 120
   TextHeight = 16
   object Button1: TButton

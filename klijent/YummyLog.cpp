@@ -6,10 +6,14 @@
 //---------------------------------------------------------------------------
 #include <Vcl.Styles.hpp>
 #include <Vcl.Themes.hpp>
-USEFORM("lista.cpp", FormLista);
+
+#include "Konfiguracija.h"
+USEFORM("uredi.cpp", FormUredi);
 USEFORM("dodaj.cpp", FormDodaj);
+USEFORM("lista.cpp", FormLista);
 USEFORM("pregled.cpp", FormPregled);
 USEFORM("pocetna.cpp", FormPocetna);
+USEFORM("sastojak.cpp", DialogSastojak);
 //---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 {
@@ -17,11 +21,12 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 	{
 		Application->Initialize();
 		Application->MainFormOnTaskBar = true;
-		TStyleManager::TrySetStyle("Lavender Classico");
 		Application->CreateForm(__classid(TFormPocetna), &FormPocetna);
 		Application->CreateForm(__classid(TFormLista), &FormLista);
 		Application->CreateForm(__classid(TFormPregled), &FormPregled);
 		Application->CreateForm(__classid(TFormDodaj), &FormDodaj);
+		Application->CreateForm(__classid(TFormUredi), &FormUredi);
+		Application->CreateForm(__classid(TDialogSastojak), &DialogSastojak);
 		Application->Run();
 	}
 	catch (Exception &exception)

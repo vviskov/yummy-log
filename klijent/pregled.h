@@ -12,6 +12,7 @@ class TFormPregled : public TForm
 {
 __published:	// IDE-managed Components
 	TButton *Button1;
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormPregled(TComponent* Owner);

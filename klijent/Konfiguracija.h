@@ -5,6 +5,11 @@
 //---------------------------------------------------------------------------
 
 namespace YummyLog {
+
+	struct WindowConf {
+		int sirina, visina, lijevo, gore;
+	};
+
 	class Konfiguracija {
 
 		static Konfiguracija* instanca;
@@ -16,14 +21,14 @@ namespace YummyLog {
 
 	public:
 		static Konfiguracija* getSingleton();
-
+        void spremi();
 
 		struct {
-			struct {
-				int sirina, visina, lijevo, gore;
-				UnicodeString naslov;
-			} glavniProzor;
-
+			WindowConf pocetna;
+			WindowConf lista;
+			WindowConf pregled;
+			WindowConf dodaj;
+			WindowConf uredi;
 		} konfiguracija;
 	};
 };

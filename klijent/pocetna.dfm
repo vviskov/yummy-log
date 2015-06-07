@@ -15,6 +15,7 @@ object FormPocetna: TFormPocetna
   Font.Name = 'Verdana'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
   OnDblClick = Button1Click
   DesignSize = (
     722
@@ -37,8 +38,6 @@ object FormPocetna: TFormPocetna
     ParentFont = False
     TabOrder = 0
     OnClick = Button1Click
-    ExplicitLeft = 168
-    ExplicitTop = 72
   end
   object StaticText1: TStaticText
     AlignWithMargins = True
@@ -56,8 +55,6 @@ object FormPocetna: TFormPocetna
     Font.Style = [fsBold, fsUnderline]
     ParentFont = False
     TabOrder = 1
-    ExplicitLeft = 0
-    ExplicitTop = 8
   end
   object StaticText2: TStaticText
     Left = 550
@@ -75,14 +72,5 @@ object FormPocetna: TFormPocetna
     ParentColor = False
     ParentFont = False
     TabOrder = 2
-    ExplicitLeft = 352
-    ExplicitTop = 225
-  end
-  object XMLDocument1: TXMLDocument
-    FileName = 
-      'C:\Users\valentina\Documents\dev\oop2\yummy-log\klijent\ReceptiM' +
-      'ock.xml'
-    Left = 584
-    Top = 240
   end
 end

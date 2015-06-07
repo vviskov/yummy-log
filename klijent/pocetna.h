@@ -7,18 +7,15 @@
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
-#include <Xml.XMLDoc.hpp>
-#include <Xml.xmldom.hpp>
-#include <Xml.XMLIntf.hpp>
 //---------------------------------------------------------------------------
 class TFormPocetna : public TForm
 {
 __published:	// IDE-managed Components
-	TXMLDocument *XMLDocument1;
 	TButton *Button1;
 	TStaticText *StaticText1;
 	TStaticText *StaticText2;
 	void __fastcall Button1Click(TObject *Sender);
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TFormPocetna(TComponent* Owner);
