@@ -47,7 +47,7 @@ exports.saveRecipe = function(xmlRecipe, callback) {
     "name": xmlRecipe.recipe.name[0],
     "description": xmlRecipe.recipe.description[0],
     "chef": xmlRecipe.recipe.chef[0],
-    "ingredients": xmlRecipe.recipe.ingredients ? 
+    "ingredients": xmlRecipe.recipe.ingredients && xmlRecipe.recipe.ingredients[0] ? 
       xmlRecipe.recipe.ingredients[0].ingredient.map(function(ingredient) {
       return {
         "ingredient" : {
@@ -59,7 +59,7 @@ exports.saveRecipe = function(xmlRecipe, callback) {
     "steps": xmlRecipe.recipe.steps[0]
   };
 
-  if(xmlRecipe.recipe.id) {
+  if(xmlRecipe.recipe.id && xmlRecipe.recipe.id[0]) {
     var mongoId = new mongodb.ObjectID(xmlRecipe.recipe.id[0]);
     recipeToSave["_id"] = mongoId;
   }
