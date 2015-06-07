@@ -12,28 +12,32 @@ var
 server.use(function(request, response, next) {
 	response.setHeader("Access-Control-Allow-Origin", "*");
 	response.setHeader("Access-Control-Allow-Headers", "X-Requested-With,content-type");
+	response.setHeader("Content-Type", "application/xml; charset=utf-8");
 	next();
 });
 server.use(exb());
 
 server.get("/recipes", function(request, response) {
+	winston.info("[GET] /recipes");
 	mongoi.loadRecipes(function(data) {
 		response.send(
 			otx({
-				'?xml version="1.0" encoding="UTF-8"?' : null,
-				"recipes": data
+				'?xml version="1.0" encoding="UTF-8"?': null,
+				"recipes": {"recipe": data}
 			})
 		);
 	});
 });
 
-server.post("/recipes", function(request, response) {
+server.post("/save_recipe", function(request, response) {
+	winston.info("[POST] /save_recipe");
 	mongoi.saveRecipe(request.body, function(data) {
 		response.send(otx({"msg": "OK"}));
 	});
 });
 
-server.delete("/recipes", function(request, response) {
+server.post("/delete_recipe", function(request, response) {
+	winston.info("[POST] /delete_recipe");
 	mongoi.deleteRecipe(request.body, function(data) {
 		response.send(otx({"msg": "OK"}));
 	});

@@ -23,13 +23,18 @@ exports.loadRecipes = function(callback) {
 
       callback(data.map(function(recipe) {
         return {
-          "recipe": {
-            "id": recipe._id.toString(),
-            "name": recipe.name,
-            "isusmater": recipe.description,
-            "steps": recipe.steps,
-            "chef": recipe.chef,
-            "ingredients": recipe.ingredients ? recipe.ingredients : []
+          "id": recipe._id.toString(),
+          "name": recipe.name,
+          "description": recipe.description,
+          "steps": recipe.steps,
+          "chef": recipe.chef,
+          "ingredients": {
+            "ingredient": recipe.ingredients ? recipe.ingredients.map(function(ingredient) {
+              return {
+                "name": ingredient.ingredient.name,
+                "amount": ingredient.ingredient.amount
+              }
+            }): []
           }
         };
       }));
@@ -38,9 +43,6 @@ exports.loadRecipes = function(callback) {
 };
 
 exports.saveRecipe = function(xmlRecipe, callback) {
-
-  winston.info("\n" + JSON.stringify(xmlRecipe) + "\n\n");
-
   var recipeToSave = {
     "name": xmlRecipe.recipe.name[0],
     "description": xmlRecipe.recipe.description[0],
