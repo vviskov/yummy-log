@@ -14,6 +14,7 @@ __published:	// IDE-managed Components
 	TButton *Button1;
 	TStaticText *StaticText1;
 	TStaticText *StaticText2;
+	TStaticText *StaticText3;
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 private:	// User declarations

@@ -9,10 +9,13 @@
 #include "dodaj.h"
 #include "Konfiguracija.h"
 #include "Spremiste.h"
-#include "uredi.h"
+#include "HtmlHelpViewer.hpp"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
+#pragma link "Vcl.HTMLHelpViewer"
+
+
 TFormLista *FormLista;
 
 
@@ -63,8 +66,8 @@ void __fastcall TFormLista::FormClose(TObject *Sender, TCloseAction &Action)
 
 void __fastcall TFormLista::Button1Click(TObject *Sender)
 {
-	FormPregled->Visible = !FormPregled->Visible;
-
+	//FormPregled->Visible = !FormPregled->Visible;
+	FormPregled->ShowModal();
 }
 //---------------------------------------------------------------------------
 

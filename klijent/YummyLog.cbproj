@@ -148,24 +148,17 @@
             <DependentOn>Spremiste.h</DependentOn>
             <BuildOrder>6</BuildOrder>
         </CppCompile>
-        <CppCompile Include="uredi.cpp">
-            <Form>FormUredi</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>uredi.h</DependentOn>
-            <BuildOrder>10</BuildOrder>
-        </CppCompile>
         <CppCompile Include="YummyLog.cpp">
             <BuildOrder>0</BuildOrder>
         </CppCompile>
         <PCHCompile Include="YummyLogPCH1.h">
             <BuildOrder>1</BuildOrder>
         </PCHCompile>
-        <FormResources Include="uredi.dfm"/>
+        <FormResources Include="sastojak.dfm"/>
         <FormResources Include="dodaj.dfm"/>
         <FormResources Include="lista.dfm"/>
         <FormResources Include="pregled.dfm"/>
         <FormResources Include="pocetna.dfm"/>
-        <FormResources Include="sastojak.dfm"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -200,9 +193,25 @@
                 </Excluded_Packages>
             </CPlusPlusBuilder.Personality>
             <Deployment>
+                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin64\cc64160mt.dll" Class="DependencyModule">
+                    <Platform Name="Win64">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName=".\Win32\Debug\YummyLog.tds" Configuration="Debug" Class="DebugSymbols">
                     <Platform Name="Win32">
                         <RemoteName>YummyLog.tds</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName=".\Win32\Debug\YummyLog.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>YummyLog.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(UsingDelphiRTL)'=='true'" LocalName="$(BDS)\bin64\borlndmm.dll" Class="DependencyModule">
+                    <Platform Name="Win64">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -216,55 +225,10 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\IndyCore210.bpl" Configuration="Debug" Class="DependencyPackage">
-                    <Platform Name="Win32">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\IndyProtocols210.de" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>IndyProtocols210.de</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin64\cc64160mt.dll" Class="DependencyModule">
-                    <Platform Name="Win64">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName=".\Win32\Debug\YummyLog.exe" Configuration="Debug" Class="ProjectOutput">
-                    <Platform Name="Win32">
-                        <RemoteName>YummyLog.exe</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\xmlrtl210.bpl" Configuration="Debug" Class="DependencyPackage">
-                    <Platform Name="Win32">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\IndySystem210.fr" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>IndySystem210.fr</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\xmlrtl210.fr" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>xmlrtl210.fr</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl210.fr" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>rtl210.fr</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName=".\Win32\Debug\Project1.tds" Configuration="Debug" Class="DebugSymbols"/>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\vcl210.ja" Configuration="Debug" Class="DependencyPackageResource">
+                <DeployFile LocalName="recepti.xml" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
-                        <RemoteName>vcl210.ja</RemoteName>
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -273,122 +237,13 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl210.de" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>rtl210.de</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\IndyCore210.ja" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>IndyCore210.ja</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\vcl210.fr" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>vcl210.fr</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\IndyCore210.fr" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>IndyCore210.fr</RemoteName>
+                <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx32\libcgstl.dylib" Class="DependencyModule">
+                    <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
                 <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'" LocalName="$(BDS)\bin\cc32160.dll" Class="DependencyModule">
                     <Platform Name="Win32">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\IndyProtocols210.bpl" Configuration="Debug" Class="DependencyPackage">
-                    <Platform Name="Win32">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\IndySystem210.bpl" Configuration="Debug" Class="DependencyPackage">
-                    <Platform Name="Win32">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile Condition="'$(UsingDelphiRTL)'=='true'" LocalName="$(BDS)\bin64\borlndmm.dll" Class="DependencyModule">
-                    <Platform Name="Win64">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="recepti.xml" Configuration="Debug" Class="ProjectFile">
-                    <Platform Name="Win32">
-                        <RemoteDir>.\</RemoteDir>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\IndyCore210.de" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>IndyCore210.de</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl210.ja" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>rtl210.ja</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\vcl210.de" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>vcl210.de</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\IndyProtocols210.ja" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>IndyProtocols210.ja</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\IndySystem210.ja" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>IndySystem210.ja</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\IndySystem210.de" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>IndySystem210.de</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl210.bpl" Configuration="Debug" Class="DependencyPackage">
-                    <Platform Name="Win32">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\xmlrtl210.ja" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>xmlrtl210.ja</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\IndyProtocols210.fr" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>IndyProtocols210.fr</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\vcl210.bpl" Configuration="Debug" Class="DependencyPackage">
-                    <Platform Name="Win32">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\Win32\xmlrtl210.de" Configuration="Debug" Class="DependencyPackageResource">
-                    <Platform Name="Win32">
-                        <RemoteName>xmlrtl210.de</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx32\libcgstl.dylib" Class="DependencyModule">
-                    <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

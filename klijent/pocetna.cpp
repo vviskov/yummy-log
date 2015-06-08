@@ -7,9 +7,11 @@
 #include "Spremiste.h"
 #include "lista.h"
 #include "Konfiguracija.h"
+#include "HtmlHelpViewer.hpp"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
+#pragma link "Vcl.HTMLHelpViewer"
 TFormPocetna *FormPocetna;
 //---------------------------------------------------------------------------
 __fastcall TFormPocetna::TFormPocetna(TComponent* Owner)

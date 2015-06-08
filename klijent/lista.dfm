@@ -1,6 +1,7 @@
 object FormLista: TFormLista
   Left = 0
   Top = 0
+  HelpContext = 6
   Caption = 'Lista'
   ClientHeight = 603
   ClientWidth = 988
@@ -12,6 +13,7 @@ object FormLista: TFormLista
   Font.Height = -13
   Font.Name = 'Tahoma'
   Font.Style = []
+  HelpFile = 'YummyHelp.chm'
   OldCreateOrder = False
   OnClose = FormClose
   OnCreate = FormCreate
@@ -26,9 +28,16 @@ object FormLista: TFormLista
     Top = 40
     Width = 75
     Height = 25
+    HelpContext = 4
     Anchors = [akTop, akRight]
     Caption = 'Pregled'
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clInactiveCaptionText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
     OnClick = Button1Click
   end
@@ -37,9 +46,16 @@ object FormLista: TFormLista
     Top = 87
     Width = 75
     Height = 25
+    HelpContext = 9
     Anchors = [akTop, akRight]
     Caption = 'Dodaj'
     Default = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clInactiveCaptionText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
     OnClick = Button2Click
   end
@@ -51,14 +67,14 @@ object FormLista: TFormLista
     Anchors = [akLeft, akTop, akRight, akBottom]
     Columns = <
       item
+        AutoSize = True
         Caption = 'Naziv'
         MinWidth = 150
-        Width = 200
       end
       item
+        AutoSize = True
         Caption = 'Kuhar'
         MinWidth = 150
-        Width = 200
       end
       item
         AutoSize = True
@@ -79,9 +95,16 @@ object FormLista: TFormLista
     Top = 136
     Width = 75
     Height = 25
+    HelpContext = 9
     Anchors = [akTop, akRight]
     Caption = 'Uredi'
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clInactiveCaptionText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 3
     OnClick = Button3Click
   end
@@ -90,9 +113,16 @@ object FormLista: TFormLista
     Top = 184
     Width = 75
     Height = 25
+    HelpContext = 5
     Anchors = [akTop, akRight]
     Caption = 'Bri'#353'i'
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clInactiveCaptionText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 4
     OnClick = Button4Click
   end

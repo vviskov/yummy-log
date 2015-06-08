@@ -1,9 +1,10 @@
 object FormPocetna: TFormPocetna
   Left = 0
   Top = 0
+  Anchors = []
   BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
   BorderWidth = 50
-  Caption = 'Pocetna'
+  Caption = 'YummyLog'
   ClientHeight = 448
   ClientWidth = 722
   Color = clBtnFace
@@ -14,6 +15,7 @@ object FormPocetna: TFormPocetna
   Font.Height = -13
   Font.Name = 'Verdana'
   Font.Style = []
+  HelpFile = 'YummyHelp.chm'
   OldCreateOrder = False
   OnClose = FormClose
   OnDblClick = Button1Click
@@ -24,12 +26,15 @@ object FormPocetna: TFormPocetna
   TextHeight = 16
   object Button1: TButton
     AlignWithMargins = True
-    Left = 262
-    Top = 164
-    Width = 161
-    Height = 97
+    Left = 270
+    Top = 212
+    Width = 160
+    Height = 80
+    HelpContext = 1
     Anchors = []
     Caption = 'KRENI'
+    Constraints.MinHeight = 80
+    Constraints.MinWidth = 160
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -25
@@ -41,15 +46,17 @@ object FormPocetna: TFormPocetna
   end
   object StaticText1: TStaticText
     AlignWithMargins = True
-    Left = 110
+    Left = 86
     Top = 32
-    Width = 505
+    Width = 550
     Height = 56
+    HelpContext = 10
+    Alignment = taCenter
     Anchors = []
     AutoSize = False
     Caption = 'Dobro do'#353'li u YummyLog'
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clCream
+    Font.Color = clBtnText
     Font.Height = -33
     Font.Name = 'Lucida Handwriting'
     Font.Style = [fsBold, fsUnderline]
@@ -61,6 +68,7 @@ object FormPocetna: TFormPocetna
     Top = 420
     Width = 146
     Height = 20
+    HelpContext = 11
     Anchors = [akRight, akBottom]
     Caption = 'Version 1, vviskov, 2015.'
     Color = clCaptionText
@@ -72,5 +80,22 @@ object FormPocetna: TFormPocetna
     ParentColor = False
     ParentFont = False
     TabOrder = 2
+  end
+  object StaticText3: TStaticText
+    Left = 160
+    Top = 94
+    Width = 405
+    Height = 31
+    HelpContext = 10
+    Anchors = []
+    Caption = 'Najbolja personalizirana kuharica'
+    Constraints.MinWidth = 405
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Lucida Handwriting'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
   end
 end
